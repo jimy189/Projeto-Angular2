@@ -2,22 +2,12 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: 'app-test',
-  template: ''
+  template: '<div class="course"><h1> Nome do curso: {{nomeCurso}}</h1> <h2>Quantidade de Vagas: {{vagas}}</h2></div>'
 })
 
 export class TestComponent {
   //O recurso da vinculação de dados como data binding
-    nomeCurso:string;
-    vagas:number;
-    requisitos: Array<string>;
-    constructor(){
-      this.nomeCurso = 'Angular';
-      this.vagas = 10;
-      this.requisitos = ["HTML", "CSS", "Javascript"];
-    }
-    matricularAluno(){
-      if (this.vagas > 0){
-        this.vagas--;
-      }
-    }
+    nomeCurso = 'Angular 5';
+    vagas = 10;
 }
+
