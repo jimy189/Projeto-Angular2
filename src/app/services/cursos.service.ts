@@ -12,7 +12,9 @@ export class CursosService {
 
   private cursos: Curso[] = [];
   private urlDados = 'assets/data/curso.json';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.getCursos();
+  }
 
   public getCursos(): Observable<Curso[]> {
     const request = this.http.get<Curso[]>(this.urlDados);
